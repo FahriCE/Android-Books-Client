@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.books.HomeFragment">
+
+    <Button
+        android:id="@+id/home_logo_btn"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="264dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="#5F00EB"
+        android:clickable="true"
+        android:clipToOutline="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:forceDarkAllowed="false"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="10sp"
+        android:text="Afficher votre bibliothèque"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_invite_txt" />
+
+    <TextView
+        android:id="@+id/home_invite_txt"
+        android:layout_width="322dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/wellfleet"
+        android:textAlignment="center"
+        android:textColor="#26324C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_img" />
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="180dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_512dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

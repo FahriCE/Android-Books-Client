@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.shelfmate.ui.books.HomeFragment"
+        android:label="Accueil"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_booksListFragment"
+            app:destination="@id/booksListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_authors"
+        android:name="com.example.shelfmate.ui.authors.AuthorsFragment"
+        android:label="@string/title_authors"
+        tools:layout="@layout/fragment_authors" >
+        <action
+            android:id="@+id/action_navigation_authors_to_newAuthorFragment"
+            app:destination="@id/newAuthorFragment" />
+        <action
+            android:id="@+id/action_navigation_authors_to_authorsDetailsFragment"
+            app:destination="@id/authorsDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tags"
+        android:name="com.example.shelfmate.ui.tags.TagsFragment"
+        android:label="Tags"
+        tools:layout="@layout/fragment_tags" />
+
+    <fragment
+        android:id="@+id/booksListFragment"
+        android:name="com.example.shelfmate.ui.books.BooksListFragment"
+        android:label="Bibliothèque">
+        <action
+            android:id="@+id/action_booksListFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+        <action
+            android:id="@+id/action_booksListFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.example.shelfmate.ui.books.BookDetailsFragment"
+        android:label="Détails du livre" />
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.example.shelfmate.ui.books.AddBookFragment"
+        android:label="Ajouter un livre"
+        tools:layout="@layout/fragment_add_book" />
+    <fragment
+        android:id="@+id/newAuthorFragment"
+        android:name="com.example.shelfmate.ui.authors.NewAuthorFragment"
+        android:label="Ajouter un auteur"
+        tools:layout="@layout/fragment_new_author" />
+    <fragment
+        android:id="@+id/authorsDetailsFragment"
+        android:name="com.example.shelfmate.ui.authors.AuthorsDetailsFragment"
+        android:label="Détails de l'auteur"
+        tools:layout="@layout/fragment_authors_details" >
+        <action
+            android:id="@+id/action_authorsDetailsFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+    </fragment>
+</navigation>
